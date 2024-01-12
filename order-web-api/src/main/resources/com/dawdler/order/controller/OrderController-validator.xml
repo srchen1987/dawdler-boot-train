@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validator>
+<validator xmlns="https://github.com/srchen1987/dawdler-series" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/srchen1987/dawdler-series  https://cdn.jsdelivr.net/gh/srchen1987/dawdler-series-xsd@main/client-conf.xsd">
+  <validator-fields>
+    <validator-field explain="订单的唯一标识符" name="orderId">
+      <![CDATA[notEmpty&number]]>
+    </validator-field>
+    <validator-field explain="与顾客表相关联的外键，表示下订单的顾客" name="customerId">
+      <![CDATA[number]]>
+    </validator-field>
+    <validator-field explain="订单的总金额" name="totalAmount">
+      <![CDATA[realNumber]]>
+    </validator-field>
+    <validator-field explain="订单的状态" name="status">
+      <![CDATA[maxSize:50]]>
+    </validator-field>
+    <validator-field explain="订单的创建时间，默认为当前时间戳" name="createdAt">
+      <![CDATA[number]]>
+    </validator-field>
+    <validator-field explain="订单的更新时间，默认为当前时间戳，当记录被更新时自动更新" name="updatedAt">
+      <![CDATA[number]]>
+    </validator-field>
+  </validator-fields>
+  <validator-fields-groups>
+    <validator-fields-group id="order">
+      <validator ref="customerId" />
+      <validator ref="totalAmount" />
+      <validator ref="status" />
+      <validator ref="createdAt" />
+      <validator ref="updatedAt" />
+    </validator-fields-group>
+  </validator-fields-groups>
+  <validator-mappings>
+    <validator-mapping name="/order/insert">
+      <validator refgid="order" />
+    </validator-mapping>
+    <validator-mapping name="/order/update">
+      <validator ref="orderId" />
+      <validator refgid="order" />
+    </validator-mapping>
+    <validator-mapping name="/order/delete">
+      <validator ref="orderId" />
+    </validator-mapping>
+  </validator-mappings>
+</validator>
