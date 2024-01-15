@@ -1,5 +1,6 @@
 ﻿<configuration debug="false" scan="false"
 	scanPeriod="60 seconds">
+	<statusListener class="ch.qos.logback.core.status.NopStatusListener" />
 	<property name="log_dir" value="logs/order" />
 	<!-- 日志最大的历史 30天 -->
 	<property name="maxHistory" value="30" />
