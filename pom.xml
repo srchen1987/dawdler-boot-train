@@ -4,13 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>dawdler-boot-train</groupId>
 	<artifactId>dawdler-boot-train</artifactId>
-	<version>0.17.1-jdk17-RELEASES</version>
+	<version>0.0.2-RELEASES</version>
 	<packaging>pom</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<dawdler.build.version>0.17.1-jdk17-RELEASES</dawdler.build.version>
+		<dawdler.build.version>0.0.2-RELEASES</dawdler.build.version>
 		<mysql-connector-j.version>8.0.33</mysql-connector-j.version>
-		<hikaricp.version>5.0.1</hikaricp.version>
+		<hikaricp.version>4.0.3</hikaricp.version>
 	</properties>
 	<modules>
 		<module>order-service</module>
@@ -32,7 +32,7 @@
 			<dependency>
 				<groupId>dawdler-boot-train</groupId>
 				<artifactId>order-api</artifactId>
-				<version>0.17.1-jdk17-RELEASES</version>
+				<version>0.0.2-RELEASES</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
