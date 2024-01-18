@@ -13,7 +13,7 @@
 		<user username="global_user" password="global_password" />
 	</global-auth>
 	<health-check check="off" scheme="http" port="19001"
-		backlog="0" username="jackson" password="pttl123">
+		backlog="0" username="jackson" password="test123">
 		<elasticSearch check="on" />
 		<jedis check="on" />
 		<rabbit check="on" />
