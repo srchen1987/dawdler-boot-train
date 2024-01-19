@@ -31,12 +31,6 @@
 			<groupId>dawdler</groupId>
 			<artifactId>dawdler-client-plug-rabbitmq</artifactId>
 		</dependency>
-		<dependency>
-			  <groupId>test_jar</groupId>
-  <artifactId>test_jar</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
