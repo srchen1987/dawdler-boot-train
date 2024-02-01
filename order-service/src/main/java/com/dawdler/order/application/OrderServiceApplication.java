@@ -1,4 +1,4 @@
-package com.dawdler.product.application;
+package com.dawdler.order.application;
 
 import com.anywide.dawdler.boot.server.annotation.DawdlerBootApplication;
 import com.anywide.dawdler.boot.server.starter.DawdlerServerApplication;

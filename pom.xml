@@ -11,6 +11,7 @@
 		<dawdler.build.version>0.17.1-jdk17-RELEASES</dawdler.build.version>
 		<mysql-connector-j.version>8.0.33</mysql-connector-j.version>
 		<hikaricp.version>5.0.1</hikaricp.version>
+		<maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
 	</properties>
 	<modules>
 		<module>order-service</module>
@@ -53,6 +54,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
 				<configuration>
 					<encoding>${project.build.sourceEncoding}</encoding>
 					<source>17</source>
